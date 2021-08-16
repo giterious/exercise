@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="@/assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="goChild">子路由</button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,6 +15,11 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods:{
+    goChild(){
+      this.$router.push('/home/child')
+    }
   }
 }
 </script>
