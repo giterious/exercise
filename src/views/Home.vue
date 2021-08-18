@@ -1,20 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="@/assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <button @click="goChild">子路由</button>
+    <router-link to="/home/child">查看eleemtui介绍</router-link>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'home',
+  data(){
+    return {
+      
+    }
+  },
   components: {
-    HelloWorld
   },
   methods:{
     goChild(){

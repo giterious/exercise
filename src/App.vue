@@ -1,13 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navigation :list="list"></navigation>
     <router-view/>
   </div>
 </template>
-
+<script>
+  import navigation from '@/components/navigation.vue';
+  export default{
+    name:'App',
+    data(){
+      return {
+        list:[
+          {name:"Home",path:'/home'},
+          {name:"Layout",path:'/layout'},
+          {name:"Container",path:'/container'},
+          {name:"Color",path:'/color'}
+        ]
+      }
+    },
+    components:{
+      navigation
+    }
+  }
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
