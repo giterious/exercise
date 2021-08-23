@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-link to="/home/child">查看eleemtui介绍</router-link>
+    <router-link to="/home/child">查看Vuex的使用</router-link>
     <router-view></router-view>
   </div>
 </template>

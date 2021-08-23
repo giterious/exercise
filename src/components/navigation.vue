@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row>
+    <el-row class="flex justify-content-center">
       <el-button v-for="(item,index) in list" :key="index" @click="goPath(index,item.path)" :type="currentIndex==index ? 'primary' : ''">{{item.name}}</el-button>
     </el-row>
   </div>
